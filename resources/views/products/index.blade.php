@@ -141,18 +141,19 @@
                 });
             });
         });
+    </script>
 
-        // SweetAlert for success message
-        @if (session('success'))
+    @if (session('success'))
+        <script>
             Swal.fire({
                 icon: 'success',
                 title: 'Berhasil',
-                text: '{{ session('success') }}',
+                text: "{{ session('success') }}",
                 timer: 3000,
                 showConfirmButton: false
             });
-        @endif
-    </script>
+        </script>
+    @endif
 
 </body>
 </html>
